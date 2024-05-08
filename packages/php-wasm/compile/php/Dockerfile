@@ -136,7 +136,7 @@ RUN if [ "$WITH_CLI_SAPI" = "yes" ]; \
 RUN if [ "$WITH_LIBXML" = "yes" ]; \
 	then \
 		set -euxo pipefail;\
-		echo -n ' --enable-libxml --with-libxml --with-libxml-dir=/root/lib --enable-dom --enable-xml --enable-simplexml --enable-xmlreader --enable-xmlwriter' >> /root/.php-configure-flags && \
+		echo -n ' --enable-libxml --with-libxml --with-libxml-dir=/root/lib --enable-dom --enable-xml --enable-simplexml --enable-xmlreader --enable-xmlwriter --enable-soap' >> /root/.php-configure-flags && \
 		echo -n ' -I /root/lib -I /root/lib/include/libxml2 -lxml2' >> /root/.emcc-php-wasm-flags && \
 		echo -n ' /root/lib/lib/libxml2.a' >> /root/.emcc-php-wasm-sources && \
 		# Libxml check is wrong in PHP < 7.4.0.
